@@ -8,7 +8,7 @@ title: wordle answer
         <script>
             window.onload = function() {
                 document.querySelector('#answer').textContent = word.toUpperCase();
-                document.querySelector('#date').textContent = new Date().toUTCString();
+                document.querySelector('#num').textContent = daysSince
             }
         </script>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6714499224274401"
@@ -17,7 +17,7 @@ title: wordle answer
     <body>
         <div'>
             <h1>Today's wordle answer</h1>
-            <p id="date"></p>
+            <h3>Wordle #<span id="num"></span> answer</h3>
             <p id="answer"></p>
         </div>    
     </body>
