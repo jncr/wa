@@ -4,21 +4,101 @@ title: wordle answer
 ---
 <html>
     <head>
+        <style>
+            body {
+                background-color: aqua;
+            }
+            h1 {
+                text-transform: uppercase;
+                text-align: center;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 4rem;
+                color:red;
+                padding: 2rem 2rem 0;
+                margin: 0
+            }
+            .h1w {
+                color: blue;
+            }
+            h2 {
+                text-align: center;
+                font-family: 'Times New Roman', Times, serif;
+                padding: 0 1rem 1rem;
+                font-size: 2rem;
+                font-weight: lighter;
+            }
+            .content {
+                padding: 0 auto;
+                text-align: center;
+                font-size: 2rem;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                line-height: 1rem;
+                border: 1px solid black;
+                padding: 2rem;
+                margin: 0 auto;
+            }
+            .about {
+                padding: 0 auto;
+                text-align: center;
+                font-size: 1rem;
+                font-family:Arial, Helvetica, sans-serif;
+                line-height: 1.5;
+            }
+            #answer {
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: bold;
+                font-size: 3rem;
+                background-color: red;
+                color: black;
+                margin: 0 auto;
+                padding: 1.5rem 0;
+                width: 15rem;
+                border-radius: 20px;
+            }
+        </style>
         <script src="index.js"></script>
         <script>
             window.onload = function() {
                 document.querySelector('#answer').textContent = word.toUpperCase();
-                document.querySelector('#num').textContent = daysSince
+                document.querySelector('#num').textContent = `Wordle #${daysSince}`
+                document.querySelector('#date').textContent = new Date().toLocaleDateString()
             }
         </script>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6714499224274401"
         crossorigin="anonymous"></script>
     </head>
     <body>
-        <div'>
-            <h1>Today's wordle answer</h1>
-            <h3>Wordle #<span id="num"></span> answer</h3>
-            <p id="answer"></p>
+        <div>
+            <h1><span class="h1w">Wordle</span><br/> of the day</h1>
+            <h2>Look smart. Keep your streak.<br/>We don't judge.</h2>
+            <hr/>
+            <div class="content">
+                <p>Today's answer</p>
+                <p id="num"></p>
+                <p id="date"></p>
+                <div class="answerBox">
+                    <p id="answer"></p>
+                </div>
+            </div>
+            <div class="about">
+                <h3><span>What's Wordle?</span></h3>
+                <p>Wordle is a simple word puzzle game that was created and developed by Josh Wardle. You are asked to guess a five letter word by guessing other five letter words. When you submit a word, it will tell you which letters are in the word and whether or not they are in the wrong spot. You only get six tries per puzzle to get the answer right, so you will need to be clever. If you’re running out of guesses on one of these puzzles, we can help give you the solution so you don’t lose your win-streak!</p>
+                <h3><span>Wordle FAQ</span></h3>
+                <p>If you have some some questions about the game, hopefully they are answered below.</p>
+
+                <h3><span>How do I get better at Wordle?</span></h3>
+                <p>The main key to getting better at Wordle is utilizing words that span all of the alphabet while avoiding repeats of other letters. If you continue to play for long, you will start using the same starter words over and over. It’s best to find a couple of them that encompass all of the vowels and the most popular consonants. These words include things like Adieu, Audio, Raise, Atone, and Stone. Starting with any of these words will hopefully get you more clues earlier in the game.</p>            <div id="THG_InContent_1_Wrap">
+                <h3><span>What are Wordle’s Rules?</span></h3>
+                <p>Here’s the official description of the rules:</p>
+                <blockquote><p>Guess the WORDLE in 6 tries.</p><p>Each guess must be a valid 5 letter word. Hit the enter button to submit.</p><p>After each guess, the color of the tiles will change to show how close your guess was to the word.</p></blockquote>
+                <p>There’s one addition to this that I would like to add and that is that letters can be repeated within the word. For example, the word “Truss” has the double ‘S’ in it. Which can trip you up if you make the assumption that only single letters are allowed.</p>
+                <h3><span>Where can I play Wordle?</span></h3>
+                <p>Wordle can be played officially on the <a href="https://www.powerlanguage.co.uk/wordle/" target="_blank" rel="noreferrer noopener">Power Language Wordle website</a>. This is the game that is played for free and only updates once a day. There are a variety of apps for your mobile devices that aren’t official, but work just as well. Type in Wordle into the Apple App Store or the Google Play Store and you will find a plethora of options.</p>
+                <h3><span>What time does the Word reset in Wordle?</span></h3>
+                <p>You will find a new puzzle and word to solve at 12am local time. This means that you will have a new puzzle to try at midnight wherever you live in the world. That also means that players in other parts of the world will get access before you might see it, so make sure to watch out for spoilers!</p>
+                <h3><span>How do I share my Wordle results?</span></h3>
+                <p>If you want to share your results, you can click on the bar graph button at the top of the screen and click on the Share button at the bottom of the menu. This will copy a grid of how you arrived at the answer so that you can paste it into a Tweet or a Facebook post.</p>
+            </div>
         </div>    
     </body>
 </html>
